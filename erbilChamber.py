@@ -3,6 +3,7 @@ import bs4
 import urllib.parse
 import csv
 
+#Scrabe all of Erbil Chamber Data from erbilchamber.org
 
 preURL = "https://www.erbilchamber.org"
 csvFile = open('ErbilChamber.csv', 'a')
