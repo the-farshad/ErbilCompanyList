@@ -10,7 +10,7 @@ csvFile = open('ErbilChamber.csv', 'a')
 csvWriter = csv.writer(csvFile)
 csvWriter.writerow(['ManagingDirector','CompanyActivity','RegistrationNumber','DateOfRegistration','MobileNumber','Address','NameOfShareholders'])
 try:
-    for i in range(0, 8620, 20):
+    for i in range(0, 20, 20):
         page = requests.get("http://erbilchamber.org/en/companies.html?start="+str(i))
         soup = bs4.BeautifulSoup(page.content, 'lxml')
         for companiesLink in soup.find_all('h3', class_="catItemTitle"):
@@ -25,6 +25,6 @@ try:
                 csvArray[j] = companiesInfo.text
                 j += 1
             csvWriter.writerow(csvArray)
-except:        
-    print(i)
+except:
+    print(i) # when happend an excepetion, you can start from i in 'For'
 csvFile.close()
