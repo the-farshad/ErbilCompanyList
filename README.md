@@ -1,5 +1,5 @@
-#Information of company registred in Erbil Chamber
-Must be install:
+# Information of company registred in Erbil Chamber
+*Must be install:*
 ```pip install lxml```
 ```pip install bs4```
 ```pip install requests```
