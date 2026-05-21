@@ -1,13 +1,32 @@
-# Information of company registred in Erbil Chamber
-*Must be install:*
-1. ```pip install lxml```
-2. ```pip install bs4```
-3. ```pip install requests```
+# ErbilCompanyList
 
-You can use 
-* ```pip install -r requirements.txt```
+Scrape the public company directory of the
+[Erbil Chamber of Commerce and Industry](https://www.erbilchamber.org)
+into a CSV file.
 
+For each registered company the scraper collects the managing director,
+company activity, registration number, date of registration, mobile number,
+address and shareholders.
 
-> May the force be with you
-###### Good Luck!
-- [x] Must Be Added
+## Requirements
+
+- Python 3
+
+Install the dependencies:
+
+```sh
+pip install -r requirements.txt
+```
+
+## Usage
+
+```sh
+python erbilChamber.py
+```
+
+Results are appended to `ErbilChamber.csv`. If a run is interrupted, the last
+processed offset is printed so it can be resumed.
+
+## License
+
+Released under the [GPL-3.0](LICENSE) license.
